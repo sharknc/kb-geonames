@@ -1,0 +1,2 @@
+elasticsearch2==2.5.0
+geocoder==1.38.1
