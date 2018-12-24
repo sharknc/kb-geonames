@@ -39,10 +39,10 @@ def process_results(hits, es_cfg, gn_cfg):
     
                 # add new geolocation to the dict
                 geolocation = build_geolocation(lat, lon)
+                item['_source']['geoLocation'] = geolocation
 
                 if geolocation:
                     print(' name[' + name + '] returned (' + lat + ',' + lon + ')')
-                    item['_source']['geolocation'] = geolocation
                     count += 1
                 else:
                     print(' name[' + name + '] returned no results')
@@ -52,7 +52,7 @@ def process_results(hits, es_cfg, gn_cfg):
                 json_str += '\n'
         else:
             #add empty geolocation and build bulk json record string
-            item['_source']['geolocation'] = {}
+            item['_source']['geoLocation'] = {}
             json_str += ''.join(json.dumps(item['_source']))
             json_str += '\n'
 
@@ -187,7 +187,7 @@ def main():
         'timeout': 1000,
         'size': 1000,
         'scroll': '2m',
-        'doc_type': 'kb-clean',
+        'doc_type': 'kb_clean',
         'query_locations': {"query":{"terms":{"types":["Location","Facility","GeopoliticalEntity","Physical.OrganizationLocationOrigin"]}}},
         'query': {"query":{"match_all":{}}},
         'loc_types': ["Location", "Facility","GeopoliticalEntity","Physical.OrganizationLocationOrigin"],
