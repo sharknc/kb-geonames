@@ -22,23 +22,23 @@ Most of the time these configurations will remain unchanged. The important confi
 
 ### Elasticsearch configurations
 
-`input_index` : The elasticsearch index to read from
-`dest_index` : The elasticsearch index that will be created and populated with new geoLocation data
-`host`: The elasticsearch host
-`port`: The elasticsearch port
-`timeout`: The elasticsearch timeout
-`scroll`: The scroll size to batch process the query results
-`size`: The batch procesing size
-`doc_type`: The mapping for both input and destination indexes
-`query`: The query that will be executed against the input index
-`loc_types`:  Array of types that contain location information
-`body`: Settings and mapping for destination elasticsearch index
+* `input_index` : The elasticsearch index to read from
+* `dest_index` : The elasticsearch index that will be created and populated with new geoLocation data
+* `host`: The elasticsearch host
+* `port`: The elasticsearch port
+* `timeout`: The elasticsearch timeout
+* `scroll`: The scroll size to batch process the query results
+* `size`: The batch procesing size
+* `doc_type`: The mapping for both input and destination indexes
+* `query`: The query that will be executed against the input index
+* `loc_types`:  Array of types that contain location information
+* `body`: Settings and mapping for destination elasticsearch index
 
 ### Geonames configurations
 
-`user`: username to use for geonames web service
-`url`: the geonames web service url
-`endpoint` : the geonames endpoint that will be used
+* `user`: username to use for geonames web service
+* `url`: the geonames web service url
+* `endpoint` : the geonames endpoint that will be used
 
 # Run Script
 ```bash
