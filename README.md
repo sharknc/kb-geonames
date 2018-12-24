@@ -14,6 +14,13 @@ $ source ./env/bin/activate
 $ pip install -r requirements.txt
 ```
 
+### Deactivate virtual environment
+
+To deactivate your current virtual environment run the following command
+```bash
+$ deactivate
+```
+
 # Update configurations
 
 The `kb-geonames.py` script has two dict configuration objects within the `main` method; `es_cfg` and `gn_cfg`. The `es_cfg` represents all of the elasticsearch configutions and the `gn_cfg` represents all of the geonames configurations. Open the python script and ensure these configurations are correct before running the script below. 
