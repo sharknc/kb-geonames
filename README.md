@@ -8,6 +8,9 @@ $ sudo apt-get install python-virtualenv
 ```
 
 ### Create virtual environment
+
+Naviagate inside the `kb-geonames` directory and run the following
+
 ```bash
 $ virtualenv -p python3 env
 $ source ./env/bin/activate
